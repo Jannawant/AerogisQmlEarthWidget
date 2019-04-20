@@ -1,0 +1,29 @@
+{
+   "osgearth_terrainlayer_cachebin" : {
+      "cache_create_time" : "1493904093",
+      "cache_profile" : {
+         "num_tiles_high_at_lod_0" : "1",
+         "num_tiles_wide_at_lod_0" : "2",
+         "srs" : "+proj=longlat +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +no_defs ",
+         "vdatum" : {},
+         "xmax" : "180",
+         "xmin" : "-180",
+         "ymax" : "90",
+         "ymin" : "-90"
+      },
+      "cachebin_id" : "adc38249_71170a4a",
+      "source_driver" : "agglite",
+      "source_name" : "boundaries_50",
+      "source_profile" : {
+         "num_tiles_high_at_lod_0" : "1",
+         "num_tiles_wide_at_lod_0" : "2",
+         "srs" : "+proj=longlat +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +no_defs ",
+         "vdatum" : {},
+         "xmax" : "180",
+         "xmin" : "-180",
+         "ymax" : "90",
+         "ymin" : "-90"
+      },
+      "source_tile_size" : "256"
+   }
+}

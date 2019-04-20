@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QTDIR>C:\Qt\5.3\msvc2013_opengl</QTDIR>
+    <LocalDebuggerEnvironment>PATH=$(QTDIR)\bin;F:\C++\OpenSceneGraph\osgEarth-NODL-build\lib\Debug;$(OSGEARTH_ROOT)\bin;$(OSG_ROOT)\bin;$(PATH);F:\C++\OpenSceneGraph\OpenSceneGraph-3.4.0\OpenSceneGraph-NODL-dbg\bin</LocalDebuggerEnvironment>
+    <LocalDebuggerWorkingDirectory>..\..\bin</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QTDIR>C:\Qt\5.3\msvc2013_opengl</QTDIR>
+    <LocalDebuggerEnvironment>PATH=$(QTDIR)\bin;$(OSGEARTH_ROOT)\bin;$(OSG_ROOT)\bin;$(PATH);F:\C++\OpenSceneGraph\OpenSceneGraph-3.4.0\OpenSceneGraph-NODL\bin;F:\C++\OpenSceneGraph\osgEarth-NODL-build\lib\Release</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerWorkingDirectory>..\..\bin</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+</Project>

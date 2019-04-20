@@ -1,0 +1,3 @@
+module Aerogis
+AerogisWidget 1.0 AerogisWidget.qml
+plugin AerogisPlugin

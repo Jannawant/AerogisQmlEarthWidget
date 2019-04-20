@@ -1,0 +1,659 @@
+<map name="Aeroshow" type="geocentric" version="2">
+    <elevation driver="gdal" name="dem" nodata_value="-32767" min_valid_value="0" max_valid_value="308360" nodata_policy="interpolate">
+      <url>../../../geodata/dem/dem.vrt</url>
+      <interpolation>bilinear</interpolation>
+      <interp_imagery>false</interp_imagery>
+    </elevation>
+
+    <image driver="gdal">
+        <url>../../../geodata/images/relief_detail.vrt</url>
+    </image>
+
+<!--image name="world" driver="gdal">
+    <url>world.tif</url>
+  </image-->
+  
+<!--model name="boundaries_100" driver="feature_geom">
+    <features name="boundaries_100" driver="ogr">
+        <url>../geodata/vector/boundaries_100.shp</url>
+    <build_spatial_index>true</build_spatial_index>
+    </features>
+
+  <layout crop_features=true>
+    <level name="adm_zoom1" style="adm_zoom1" min_range="100000000" max_range="250000000" />
+    <level name="adm_zoom2" style="adm_zoom2" min_range="30000000" max_range="100000000"/>
+  </layout>
+
+  <styles>
+    <style type="text/css">
+      adm_zoom1 {
+        stroke: #ebff00;
+        stroke-opacity: 0.8;
+        stroke-width: 50000m;
+        stroke-min-pixels: 4;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        altitude-clamping: terrain;
+altitude-technique: map; altitude-binding: vertex; altitude-offset: 20000;
+        render-lighting: false;
+      }
+
+      adm_zoom2 {
+        stroke: #ebff00;
+        stroke-opacity: 0.8;
+        stroke-width: 30000m;
+        stroke-min-pixels: 2;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        altitude-clamping: terrain;
+altitude-technique: map; altitude-binding: vertex; altitude-offset: 20000;
+        render-lighting: false;
+      }
+    </style>
+  </styles>
+</model-->
+
+<image name="boundaries_50" driver="agglite" min_level="1" max_level="6">
+    
+    <features name="boundaries_50" driver="ogr">
+        <url>../../../geodata/vector/boundaries_50.shp</url>
+        <build_spatial_index>true</build_spatial_index>
+    </features>
+
+  <styles>
+    <style type="text/css">
+
+      default {
+          stroke: #ebff00;
+          stroke-width: 5km;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+          stroke-opacity: 0.7;
+      }
+
+    </style>
+  </styles>
+</image>
+
+<!--<model name="boundaries_50" driver="feature_geom">
+
+    <features name="boundaries_50" driver="ogr">
+        <url>../geodata/vector/boundaries_50.shp</url>
+    <build_spatial_index>true</build_spatial_index>
+    </features>
+
+  <layout crop_features=true>
+    <level name="adm_zoom3" style="adm_zoom3" min_range="5000000" max_range="30000000" />
+  </layout>
+
+  <styles>
+    <style type="text/css">
+      adm_zoom3 {
+        stroke: #ebf000;
+        stroke-opacity: 0.3;
+        stroke-width: 15000m;
+        stroke-min-pixels: 6;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        altitude-clamping: terrain;
+        altitude-technique: map; 
+		altitude-binding: vertex; altitude-offset: 20000;
+        render-lighting: false;
+      }
+    </style>
+  </styles>
+</model>
+-->
+
+<image name="boundaries_10" driver="agglite" min_level="6">
+
+    <features name="boundaries_10" driver="ogr">
+        <url>../../../geodata/vector/boundaries_10.shp</url>
+    <build_spatial_index>true</build_spatial_index>
+    </features>
+
+  <styles>
+    <style type="text/css">
+
+      default {
+          stroke: #ebff00;
+          stroke-width: 2km;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+          stroke-opacity: 0.7;
+      }
+
+    </style>
+  </styles>
+</image>
+
+<!--<model name="boundaries_10" driver="feature_geom">
+    <features name="boundaries_10" driver="ogr">
+        <url>../geodata/vector/boundaries_10.shp</url>
+    <build_spatial_index>true</build_spatial_index>
+    </features>
+
+  <layout crop_features=true>
+    <level name="adm_zoom4" style="adm_zoom4" min_range="3000000" max_range="5000000" />
+    <level name="adm_zoom5" style="adm_zoom5" min_range="2000000" max_range="3000000" />
+    <level name="adm_zoom6" style="adm_zoom6" min_range="1" max_range="2000000" />
+  </layout>
+
+  <styles>
+    <style type="text/css">
+      adm_zoom4 {
+        stroke: #ebff00;
+        stroke-width: 5000m;
+        stroke-opacity: 0.3;
+        stroke-min-pixels: 3;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        altitude-clamping: terrain;
+		altitude-technique: drape;
+        render-lighting: false;
+      }
+
+      adm_zoom5 {
+        stroke: #ebff00;
+        stroke-width: 2500m;
+        stroke-opacity: 0.3;
+        stroke-min-pixels: 5;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        altitude-clamping: terrain;
+		altitude-technique: drape;
+        render-lighting: false;
+      }
+
+      adm_zoom6 {
+        stroke: #ebff00;
+        stroke-width: 1800m;
+        stroke-opacity: 0.3;
+        stroke-min-pixels: 2;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        altitude-clamping: terrain;
+		altitude-technique: drape;
+        render-lighting: false;
+      }
+
+    </style>
+  </styles>
+</model>
+-->
+
+
+<!--<model name="rivers" driver="feature_geom">
+
+    <features name="rivers" driver="ogr">
+        <url>../geodata/vector/rivers.shp</url>
+    <build_spatial_index>true</build_spatial_index>
+    </features>
+
+  <feature_indexing enabled="true"/>
+
+  <layout crop_features=true>
+    <level name="rivers_zoom11" style="rivers_11" min_range="1" max_range="50000000" />
+    <level name="rivers_zoom12" style="rivers_12" min_range="1" max_range="20000000" />
+    <level name="rivers_zoom21" style="rivers_21" min_range="1" max_range="10000000" />
+    <level name="rivers_zoom22" style="rivers_22" min_range="1" max_range="8000000" />
+  </layout>
+
+  <styles>
+     <selector name="rivers_11" class="style_rivers_11">
+        <query>
+          <expr><![CDATA[ level = 11 ]]></expr>
+        </query>
+      </selector>
+
+     <selector name="rivers_12" class="style_rivers_12">
+        <query>
+          <expr><![CDATA[ level = 12 ]]></expr>
+        </query>
+      </selector>
+
+     <selector name="rivers_21" class="style_rivers_21">
+        <query>
+          <expr><![CDATA[ level = 21 ]]></expr>
+        </query>
+      </selector>
+
+     <selector name="rivers_22" class="style_rivers_22">
+        <query>
+          <expr><![CDATA[ level = 22 OR level = 23 ]]></expr>
+        </query>
+      </selector>
+
+    <style type="text/css">
+      style_rivers_11 {
+        stroke: #0051bc;
+        stroke-opacity: 0.8;
+        stroke-width: 3000m;
+        stroke-min-pixels: 1;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        altitude-clamping: terrain;
+        altitude-technique: map; altitude-binding: vertex; altitude-offset: 1000;
+        render-lighting: false;
+      }
+
+      style_rivers_12 {
+        stroke: #0051bc;
+        stroke-opacity: 0.8;
+        stroke-width: 2000m;
+        stroke-min-pixels: 1;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        altitude-clamping: terrain;
+        altitude-technique: map; altitude-binding: vertex; altitude-offset: 1000;
+        render-lighting: false;
+      }
+
+      style_rivers_21 {
+        stroke: #0051bc;
+        stroke-opacity: 0.8;
+        stroke-width: 1000m;
+        stroke-min-pixels: 1;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        altitude-clamping: terrain;
+        altitude-technique: map; altitude-binding: vertex; altitude-offset: 1000;
+        render-lighting: false;
+      }
+
+      style_rivers_22 {
+        stroke: #0051bc;
+        stroke-opacity: 0.8;
+        stroke-width: 700m;
+        stroke-min-pixels: 1;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        altitude-clamping: terrain;
+        altitude-technique: map; altitude-binding: vertex; altitude-offset: 1000;
+        render-lighting: false;
+      }
+
+    </style>
+  </styles>
+</model>
+-->
+
+<image name="rivers" driver="agglite" min_level="1">
+
+    <features name="rivers" driver="ogr">
+        <url>../../../geodata/vector/rivers.shp</url>
+    <build_spatial_index>true</build_spatial_index>
+    </features>
+ 
+  <styles>
+<!--     <selector name="rivers_11" class="style_rivers_11">
+        <query>
+          <expr><![CDATA[ level = 11 ]]></expr>
+        </query>
+      </selector>
+
+      <selector name="rivers_12" class="style_rivers_12">
+        <query>
+          <expr><![CDATA[ level = 12 ]]></expr>
+        </query>
+      </selector>
+
+     <selector name="rivers_21" class="style_rivers_21">
+        <query>
+          <expr><![CDATA[ level = 21 ]]></expr>
+        </query>
+      </selector>
+
+     <selector name="rivers_22" class="style_rivers_22">
+        <query>
+          <expr><![CDATA[ level = 22 OR level = 23 ]]></expr>
+        </query>
+      </selector>
+    <style type="text/css">
+
+      style_rivers_11 {
+          stroke: #0051bc;
+          stroke-opacity: 0.8;
+          stroke-width: 3000m;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+      }
+
+      style_rivers_12 {
+          stroke: #0051bc;
+          stroke-opacity: 0.8;
+          stroke-width: 1000m;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+      }
+
+      style_rivers_21 {
+          stroke: #0051bc;
+          stroke-opacity: 0.8;
+          stroke-width: 700m;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+      }
+
+      style_rivers_22 {
+          stroke: #0051bc;
+          stroke-opacity: 0.8;
+          stroke-width: 500m;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+      }
+
+
+    </style>-->
+    <style type="text/css">
+
+      default {
+          stroke: #0051bc;
+          stroke-opacity: 0.8;
+          stroke-width: 3000m;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+      }
+
+    </style>
+  </styles>
+</image>
+
+<model name="airports" driver="feature_geom">
+  <features name="airports" driver="ogr">
+    <url>../../../geodata/vector/airports.shp</url>
+    <build_spatial_index>true</build_spatial_index>
+  </features>
+
+  <layout crop_features=true>
+    <level name="airports1" style="airports1" max_range="5000000" />
+  </layout>
+
+  <styles>
+    <style type="text/css">
+      airports1 {
+        icon: "../../../geodata/icons/airport_64.tga";
+        icon-placement: centroid;
+        icon-scale: 0.25;
+		text-provider: annotation_fix;
+      }
+    </style>
+  </styles>
+</model>
+
+<model name="country_names" driver="feature_geom">
+  <features name="country_names" driver="ogr">
+    <url>../../../geodata/vector/country_names.shp</url>
+    <build_spatial_index>true</build_spatial_index>
+  </features>
+  
+  <feature_indexing enabled="true"/>
+
+  <layout>
+    <level name="level0" style="selector_level0" max_range="100000000" />
+    <level name="level1" style="selector_level1" max_range="10000000" />
+    <level name="level2" style="selector_level2" max_range="6500000" />
+    <level name="level3" style="selector_level3" max_range="4000000" />
+    <level name="level4" style="selector_level4" max_range="2000000" />
+  </layout>
+
+  <styles>
+    <selector name="selector_level0" class="style_level0">
+      <query>
+        <expr><![CDATA[ level = 0 ]]></expr>
+      </query>
+    </selector>
+
+    <selector name="selector_level1" class="style_level1">
+      <query>
+        <expr><![CDATA[ level = 1 ]]></expr>
+      </query>
+    </selector>
+
+    <selector name="selector_level2" class="style_level2">
+      <query>
+        <expr><![CDATA[ level = 2 ]]></expr>
+      </query>
+    </selector>
+
+    <selector name="selector_level3" class="style_level3">
+      <query>
+        <expr><![CDATA[ level = 3 ]]></expr>
+      </query>
+    </selector>
+
+    <selector name="selector_level4" class="style_level4">
+      <query>
+        <expr><![CDATA[ level = 4 ]]></expr>
+      </query>
+    </selector>
+
+    <style type="text/css">
+      style_level0 {
+		    text-font: arial.ttf;
+        text-encoding: utf-8;
+        text-content:   [name_ru];
+        text-priority:  [level];
+        text-size:      12;
+        text-fill:      #f8b674;
+        text-halo:      #000000;
+        text-align:     center_center;
+        text-declutter: true;
+        text-occlusion-cull: true;
+      }
+
+      style_level1 {
+        text-font: arial.ttf;
+        text-encoding: utf-8;
+        text-content:   [name_ru];
+        text-priority:  [level];
+        text-size:      12;
+        text-fill:      #f8b674;
+        text-halo:      #000000;
+        text-align:     center_center;
+        text-declutter: true;
+        text-occlusion-cull: true;
+      }
+
+      style_level2 {
+        text-font: arial.ttf;
+        text-encoding: utf-8;
+        text-content:   [name_ru];
+        text-priority:  [level];
+        text-size:      12;
+        text-fill:      #f8b674;
+        text-halo:      #000000;
+        text-align:     center_center;
+        text-declutter: true;
+        text-occlusion-cull: true;
+      }
+
+      style_level3 {
+        text-font: arial.ttf;
+        text-encoding: utf-8;
+        text-content:   [name_ru];
+        text-priority:  [level];
+        text-size:      12;
+        text-fill:      #f8b674;
+        text-halo:      #000000;
+        text-align:     center_center;
+        text-declutter: true;
+        text-occlusion-cull: true;
+      } 
+
+      style_level4 {
+        text-font: arial.ttf;
+        text-encoding: utf-8;
+        text-content:   [name_ru];
+        text-priority:  [level];
+        text-size:      12;
+        text-fill:      #f8b674;
+        text-halo:      #000000;
+        text-align:     center_center;
+        text-declutter: true;
+        text-occlusion-cull: true;
+      } 
+    </style>
+
+  </styles>
+</model>
+
+<model name="cities" driver="feature_geom">
+        <layout>
+            <level name="level11" style="selector_level11" max_range="30000000" />
+            <level name="level12" style="selector_level12" max_range="10000000" />
+            <level name="level13" style="selector_level13" max_range="6000000" />
+            <level name="level32" style="selector_level32" max_range="3000000" />
+            <level name="level33" style="selector_level33" max_range="1000000" />
+            <level name="level44" style="selector_level44" max_range="1000000" />
+        </layout>
+
+        <features name="cities" driver="ogr">
+            <url>../../../geodata/vector/cities.shp</url>
+    <build_spatial_index>true</build_spatial_index>
+        </features>
+        
+        <feature_indexing enabled="true"/>
+
+        <styles>
+
+          <selector name="selector_level11" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 11 ]]></expr>
+            </query>
+          </selector>
+
+          <selector name="selector_level12" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 12 OR level = 21]]></expr>
+            </query>
+          </selector>
+
+          <selector name="selector_level13" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 13 OR level = 31 OR level = 22]]></expr>
+            </query>
+          </selector>
+
+          <selector name="selector_level32" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 32 OR level = 44]]></expr>
+            </query>
+          </selector>
+
+          <selector name="selector_level33" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 33 OR level = 43]]></expr>
+            </query>
+          </selector>
+
+          <selector name="selector_level44" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 44 OR level = 45]]></expr>
+            </query>
+          </selector>
+
+          <style type="text/css">              
+            style_level11 {
+		        icon: "../../../geodata/icons/circle_32.gif";
+				    icon-placement: centroid;
+				    icon-scale: 0.25;
+				    text-provider: annotation_fix;
+            }     
+            </style>
+
+        </styles>   
+    </model>
+
+<model name="cities_labels" driver="feature_geom">
+        <layout>
+            <level name="level11" style="selector_level11" max_range="30000000" />
+            <level name="level12" style="selector_level12" max_range="10000000" />
+            <level name="level13" style="selector_level13" max_range="6000000" />
+            <level name="level32" style="selector_level32" max_range="3000000" />
+            <level name="level33" style="selector_level33" max_range="1000000" />
+            <level name="level44" style="selector_level44" max_range="1000000" />
+        </layout>
+
+        <features name="cities_labels" driver="ogr">
+            <url>../../../geodata/vector/cities.shp</url>
+        </features>
+        
+        <feature_indexing enabled="true"/>
+
+        <styles>
+          <selector name="selector_level11" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 11 ]]></expr>
+            </query>
+          </selector>
+
+          <selector name="selector_level12" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 12 OR level = 21]]></expr>
+            </query>
+          </selector>
+
+          <selector name="selector_level13" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 13 OR level = 31 OR level = 22]]></expr>
+            </query>
+          </selector>
+
+          <selector name="selector_level32" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 32 OR level = 44]]></expr>
+            </query>
+          </selector>
+
+          <selector name="selector_level33" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 33 OR level = 43]]></expr>
+            </query>
+          </selector>
+
+          <selector name="selector_level44" class="style_level11">
+            <query>
+                <expr><![CDATA[ level = 44 OR level = 45]]></expr>
+            </query>
+          </selector>
+
+          <style type="text/css">              
+            style_level11 {
+                text-font: arial.ttf;
+                text-encoding: utf-8;
+                text-content:   [name_ru];
+                text-priority:  [level];
+                text-size:      14;
+                text-fill:      #ffffff;
+                text-halo:      #000000;
+                text-align:     left_bottom;
+                text-declutter: true;
+                text-occlusion-cull: true;  
+            }     
+            </style>
+        </styles>   
+    </model>
+
+	
+<options lighting="false" >
+   <terrain driver="mp" min_tile_range_factor="7" elevation_smoothing="true">
+   </terrain>
+   <cache type="filesystem">
+      <path>../../../geodata/cache</path>
+      <cache_policy usage="read_write"/>
+   </cache>
+</options>
+
+    <external>
+        <decluttering>
+            <out_animation_time>  0.0  </out_animation_time>
+            <in_animation_time>   0.25 </in_animation_time>
+            <min_animation_scale> 0.45 </min_animation_scale>
+            <min_animation_alpha> 0.0  </min_animation_alpha>
+            <sort_by_priority>    true </sort_by_priority>
+            <snap_to_pixel>       true </snap_to_pixel>
+        </decluttering>
+    </external>
+  
+</map>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F9663F22-4796-45D7-99C6-F5E7B659949C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>label_annotation_fix</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\bin\osgPlugins-3.4.0\</OutDir>
+    <TargetName>osgdb_osgearth_label_annotation_fixd</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>osgdb_osgearth_label_annotation_fix</TargetName>
+    <OutDir>..\..\bin\osgPlugins-3.4.0\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LABEL_ANNOTATION_FIX_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;$(OSG_ROOT)/include;$(OSGEARTH_ROOT)/include;$(OSG_DIR)/include;$(OSGEARTH_DIR)/include;..\EarthWidget;debug;$(QTDIR)\include;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtCore;$(QTDIR)\mkspecs\win32-msvc2013;F:\C++\OpenSceneGraph\osgearth\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Qt\5.3\msvc2013_opengl\lib;F:\C++\OpenSceneGraph\osgEarth-NODL-build\lib\Debug;$(OSGEARTH_ROOT)\lib;$(OSG_ROOT)\lib;$(QTDIR)\lib;F:\C++\OpenSceneGraph\OpenSceneGraph-3.4.0\OpenSceneGraph-NODL-dbg\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>osgEarthUtild.lib;osgEarthAnnotationd.lib;osgEarthSymbologyd.lib;osgEarthFeaturesd.lib;osgUtild.lib;osgViewerd.lib;osgGAd.lib;osgDBd.lib;osgTextd.lib;osgd.lib;osgEarthd.lib;OpenThreadsd.lib;Qt5Quickd.lib;Qt5OpenGLd.lib;Qt5Widgetsd.lib;Qt5Guid.lib;Qt5Qmld.lib;Qt5Networkd.lib;Qt5Xmld.lib;Qt5Cored.lib;Qt5SerialPortd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LABEL_ANNOTATION_FIX_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\C++\OpenSceneGraph\osgearth\include;.;$(OSG_ROOT)/include;$(OSGEARTH_ROOT)/include;$(OSG_DIR)/include;$(OSGEARTH_DIR)/include;..\EarthWidget;debug;$(QTDIR)\include;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtCore;$(QTDIR)\mkspecs\win32-msvc2013;F:\C++\OpenSceneGraph\OpenSceneGraph-3.4.0\OpenSceneGraph-NODL\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Qt\5.3\msvc2013_opengl\lib;$(OSGEARTH_ROOT)\lib;$(OSG_ROOT)\lib;$(OSGEARTH_ROOT)\lib64;$(OSG_ROOT)\lib64;$(QTDIR)\lib;F:\C++\OpenSceneGraph\osgEarth-NODL-build\lib\Release;F:\C++\OpenSceneGraph\OpenSceneGraph-3.4.0\OpenSceneGraph-NODL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>osgEarthUtil.lib;osgEarthAnnotation.lib;osgEarthSymbology.lib;osgEarthFeatures.lib;osgUtil.lib;osgViewer.lib;osgGA.lib;osgDB.lib;osgText.lib;osg.lib;osgEarth.lib;OpenThreads.lib;Qt5Quick.lib;Qt5OpenGL.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Qml.lib;Qt5Network.lib;Qt5Xml.lib;Qt5Core.lib;Qt5SerialPort.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\EarthWidget\ShaderGeneratorFix.cpp" />
+    <ClCompile Include="AnnotationLabelSourceFix.cpp" />
+    <ClCompile Include="PlaceNodeFix.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\EarthWidget\ShaderGeneratorFix.h" />
+    <ClInclude Include="AnnotationLabelSourceFix.h" />
+    <ClInclude Include="PlaceNodeFix.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

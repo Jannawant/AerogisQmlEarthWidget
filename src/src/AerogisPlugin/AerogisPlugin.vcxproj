@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BC15C0F6-D6B5-3823-AFFE-4C399E1CD08E}</ProjectGuid>
+    <RootNamespace>AerogisPlugin</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolSet>v120_xp</PlatformToolSet>
+    <OutputDirectory>..\..\bin\Aerogis\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>AerogisPlugin</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolSet>v120_xp</PlatformToolSet>
+    <OutputDirectory>..\..\bin\Aerogis\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>AerogisPlugind</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\bin\Aerogis\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AerogisPlugin</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\bin\Aerogis\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AerogisPlugind</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(IncludePath);C:\Program Files (x86)\Visual Leak Detector\include</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;$(OSG_ROOT)/include;$(OSGEARTH_ROOT)/include;$(OSG_DIR)/include;$(OSGEARTH_DIR)/include;..\EarthWidget;release;$(QTDIR)\include;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtCore;$(QTDIR)\mkspecs\win32-msvc2013;F:\C++\OpenSceneGraph\osgearth\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -w34100 -w34189 -w44996 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_NO_DEBUG_OUTPUT;QT_PLUGIN;QT_QUICK_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_QML_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Qt5WebSockets.lib;osgEarthUtil.lib;osgEarthAnnotation.lib;osgEarthSymbology.lib;osgEarthFeatures.lib;osgUtil.lib;osgViewer.lib;osgGA.lib;osgDB.lib;osgText.lib;osg.lib;osgEarth.lib;OpenThreads.lib;Qt5Quick.lib;Qt5OpenGL.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Qml.lib;Qt5Network.lib;Qt5Xml.lib;Qt5Core.lib;Qt5SerialPort.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\5.3\msvc2013_opengl\lib;$(OSGEARTH_ROOT)\lib;$(OSG_ROOT)\lib;$(QTDIR)\lib;F:\C++\OpenSceneGraph\osgEarth-NODL-build\lib\Release;F:\C++\OpenSceneGraph\OpenSceneGraph-3.4.0\OpenSceneGraph-NODL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\AerogisPlugin.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_PLUGIN;QT_QUICK_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_QML_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;$(OSG_ROOT)/include;$(OSGEARTH_ROOT)/include;$(OSG_DIR)/include;$(OSGEARTH_DIR)/include;..\EarthWidget;debug;$(QTDIR)\include;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtCore;$(QTDIR)\mkspecs\win32-msvc2013;F:\C++\OpenSceneGraph\osgearth\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-w34100 -w34189 -w44996 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_PLUGIN;QT_QUICK_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_QML_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Qt5WebSocketsd.lib;osgEarthUtild.lib;osgEarthAnnotationd.lib;osgEarthSymbologyd.lib;osgEarthFeaturesd.lib;osgUtild.lib;osgViewerd.lib;osgGAd.lib;osgDBd.lib;osgTextd.lib;osgd.lib;osgEarthd.lib;OpenThreadsd.lib;Qt5Quickd.lib;Qt5OpenGLd.lib;Qt5Widgetsd.lib;Qt5Guid.lib;Qt5Qmld.lib;Qt5Networkd.lib;Qt5Xmld.lib;Qt5Cored.lib;Qt5SerialPortd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\5.3\msvc2013_opengl\lib;F:\C++\OpenSceneGraph\osgEarth-NODL-build\lib\Debug;$(OSGEARTH_ROOT)\lib;$(OSG_ROOT)\lib;$(QTDIR)\lib;F:\C++\OpenSceneGraph\OpenSceneGraph-3.4.0\OpenSceneGraph-NODL-dbg\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\AerogisPlugind.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_PLUGIN;QT_QUICK_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_QML_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\EarthWidget\ShaderGeneratorFix.cpp" />
+    <ClCompile Include="Debug\moc_VSSWebReader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_VSSWebReader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="AerogisConfig.cpp" />
+    <ClCompile Include="AerogisCore.cpp" />
+    <ClCompile Include="..\EarthWidget\EarthWidget.cpp" />
+    <ClCompile Include="..\EarthWidget\OSGGroup.cpp" />
+    <ClCompile Include="..\EarthWidget\OSGNode.cpp" />
+    <ClCompile Include="..\EarthWidget\OSGNodeFile.cpp" />
+    <ClCompile Include="..\EarthWidget\OSGViewport.cpp" />
+    <ClCompile Include="..\EarthWidget\QuickWindowViewer.cpp" />
+    <ClCompile Include="..\EarthWidget\ShaderFix.cpp" />
+    <ClCompile Include="..\EarthWidget\Utility.cpp" />
+    <ClCompile Include="aerogis_plugin.cpp" />
+    <ClCompile Include="Debug\moc_aerogis_plugin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_VSSComReader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_aerogis_plugin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_QuickWindowViewer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_VSSComReader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="VSSComReader.cpp" />
+    <ClCompile Include="VSSProtocol.cpp" />
+    <ClCompile Include="VSSRoutines.cpp" />
+    <ClCompile Include="VSSWebReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="AerogisConfig.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AerogisConfig.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AerogisConfig.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="AerogisCore.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AerogisCore.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AerogisCore.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\EarthWidget\EarthWidget.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing EarthWidget.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing EarthWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\EarthWidget\Export.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\EarthWidget\OSGGroup.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing OSGGroup.hpp...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing OSGGroup.hpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\EarthWidget\OSGNode.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing OSGNode.hpp...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing OSGNode.hpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\EarthWidget\OSGNodeFile.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing OSGNodeFile.hpp...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing OSGNodeFile.hpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\EarthWidget\OSGViewport.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing OSGViewport.hpp...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing OSGViewport.hpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\EarthWidget\QuickWindowViewer.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QuickWindowViewer.hpp...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QuickWindowViewer.hpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\EarthWidget\ShaderFix.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="..\EarthWidget\Utility.hpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="aerogis_plugin.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing aerogis_plugin.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing aerogis_plugin.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\OSGGroup.moc">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\EarthWidget\OSGGroup.cpp;C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;..\EarthWidget\OSGGroup.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+"$(QTDIR)\bin\moc.exe"  "..\EarthWidget\OSGGroup.cpp" -o "$(ConfigurationName)\%(Filename).moc"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing OSGGroup.cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\OSGGroup.moc;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="release\OSGGroup.moc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\EarthWidget\OSGGroup.cpp;C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;..\EarthWidget\OSGGroup.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+"$(QTDIR)\bin\moc.exe"  "..\EarthWidget\OSGGroup.cpp" -o "$(ConfigurationName)\%(Filename).moc"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing OSGGroup.cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\OSGGroup.moc;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="debug\OSGNodeFile.moc">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\EarthWidget\OSGNodeFile.cpp;C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;..\EarthWidget\OSGNodeFile.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+"$(QTDIR)\bin\moc.exe"  "..\EarthWidget\OSGNodeFile.cpp" -o "$(ConfigurationName)\%(Filename).moc"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing OSGNodeFile.cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\OSGNodeFile.moc;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="release\OSGNodeFile.moc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\EarthWidget\OSGNodeFile.cpp;C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;..\EarthWidget\OSGNodeFile.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+"$(QTDIR)\bin\moc.exe"  "..\EarthWidget\OSGNodeFile.cpp" -o "$(ConfigurationName)\%(Filename).moc"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing OSGNodeFile.cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\OSGNodeFile.moc;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="debug\OSGViewport.moc">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\EarthWidget\OSGViewport.cpp;C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;..\EarthWidget\OSGViewport.cpp;$(QTDIR)\bin\moc.exe;..\EarthWidget\OSGViewport.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+"$(QTDIR)\bin\moc.exe"  "..\EarthWidget\OSGViewport.cpp" -o "$(ConfigurationName)\%(Filename).moc"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing OSGViewport.cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\OSGViewport.moc;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="release\OSGViewport.moc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\EarthWidget\OSGViewport.cpp;C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;..\EarthWidget\OSGViewport.cpp;$(QTDIR)\bin\moc.exe;..\EarthWidget\OSGViewport.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+"$(QTDIR)\bin\moc.exe"  "..\EarthWidget\OSGViewport.cpp" -o "$(ConfigurationName)\%(Filename).moc"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing OSGViewport.cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\OSGViewport.moc;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="debug\QuickWindowViewer.moc">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\EarthWidget\QuickWindowViewer.cpp;C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;..\EarthWidget\QuickWindowViewer.cpp;$(QTDIR)\bin\moc.exe;..\EarthWidget\QuickWindowViewer.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+"$(QTDIR)\bin\moc.exe"  "..\EarthWidget\QuickWindowViewer.cpp" -o "$(ConfigurationName)\%(Filename).moc"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QuickWindowViewer.cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\QuickWindowViewer.moc;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="release\QuickWindowViewer.moc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\EarthWidget\QuickWindowViewer.cpp;C:\Qt\5.3\msvc2013_opengl\bin\moc.exe;..\EarthWidget\QuickWindowViewer.cpp;$(QTDIR)\bin\moc.exe;..\EarthWidget\QuickWindowViewer.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+"$(QTDIR)\bin\moc.exe"  "..\EarthWidget\QuickWindowViewer.cpp" -o "$(ConfigurationName)\%(Filename).moc"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QuickWindowViewer.cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\QuickWindowViewer.moc;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <ClCompile Include="Debug\moc_AerogisConfig.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_AerogisCore.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_EarthWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_OSGGroup.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_OSGNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_OSGNodeFile.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_OSGViewport.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_QuickWindowViewer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_AerogisConfig.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_AerogisCore.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_EarthWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_OSGGroup.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_OSGNode.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_OSGNodeFile.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_OSGViewport.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\bin\Aerogis\AerogisWidget.qml">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\EarthWidget\ShaderGeneratorFix.h" />
+    <CustomBuild Include="VSSWebReader.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing VSSWebReader.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing VSSWebReader.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_NO_DEBUG_OUTPUT -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL  "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013" "-IF:\C++\OpenSceneGraph\osgearth\include"</Command>
+    </CustomBuild>
+    <CustomBuild Include="VSSComReader.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing VSSComReader.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\debug" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing VSSComReader.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-I$(OSG_ROOT)\include" "-I$(OSGEARTH_ROOT)\include" "-I$(OSG_DIR)\include" "-I$(OSGEARTH_DIR)\include" "-I.\..\EarthWidget" "-I.\release" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtANGLE" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtNetwork" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\mkspecs\win32-msvc2013"</Command>
+    </CustomBuild>
+    <ClInclude Include="VSSComReader.h" />
+    <ClInclude Include="VSSProtocol.h" />
+    <ClInclude Include="VSSRoutines.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_Win32="msvc2013_opengl" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
